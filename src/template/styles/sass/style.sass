@@ -3,11 +3,13 @@
 @import fonts.sass
 @import grid.sass
 @import '../../libs/fancybox/dist/jquery.fancybox.css'
+@import '../../libs/slick-carousel/slick/slick.css'
+@import '../../libs/perfect-scrollbar/css/perfect-scrollbar.css'
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
+$font-size: 14px
+$font-family-1: 'Segoe UI', sans-serif
 $color-1: #000
 
 
@@ -53,35 +55,80 @@ input
 input, textarea, button
  outline: none
 
+.icon
+	display: inline-block
+	vertical-align: middle
+
 /* Form elements */
 .input
 	position: relative
 	&__wrap
 		display: block
-		font-size: $font-size
+		font-size: 16px
 		font-family: $font-family-1
 		background: white
 		width: 100%
+		text-align: center
+		letter-spacing: 0.8px
+		&::placeholder
+			opacity: 1
+			color: $color-1
+	&_normal
+		.input
+			&__wrap
+				border: 2px solid #e6e6e6
+				height: 50px
+				background-color: #fff
+				border-radius: 50px
+				
 
 
 .textarea
 	position: relative
 	&__wrap
 		display: block
-		font-size: $font-size
+		font-size: 16px
 		font-family: $font-family-1
 		background: white
 		width: 100%
+		height: 85px
 		resize: none
+		border: 2px solid #e6e6e6
+		border-radius: 50px
+		padding: 10px
+		text-align: center
+		letter-spacing: 0.8px
+		&::placeholder
+			opacity: 1
+			color: $color-1
 
 .btn
 	position: relative
-	display: inline-block
-	font-size: 0
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 16px
 	font-family: $font-family-1
 	cursor: pointer
 	text-align: center
 	transition: .3s
+	border-radius: 50px
+	&_small
+		height: 30px
+		padding-bottom: 2px
+	&_normal
+		height: 43px
+		letter-spacing: 0.8px
+	&_green, &_yellow, &_red, &_blue
+		color: #fff
+	&_green
+		background-color: #4a981b
+	&_yellow
+		background-color: #ffc000
+	&_red
+		background-color: #e90101
+	&_blue
+		background-color: #0194f9
 
 .input input, .textarea textarea
 	transition: .3s
@@ -107,10 +154,689 @@ input, .btn, .slick-slide, textarea
 
 .main-wrap
 	// overflow-x: hidden
+	background-color: #cfe6f7
+
+
+.panel, .footer
+	background-color: #fff
+
+
+
+.logo
+	&__text
+		padding-bottom: 5px
+		margin-left: 25px
+		
+
+
+.panel
+	padding-top: 10px
+	padding-bottom: 15px
+	border-bottom: 2px solid #3e3e40
+	&__logo
+		width: 346px
+
+	&__nav
+		width: 550px
+		margin-left: auto
+		margin-right: 30px
+		ul
+			justify-content: space-between
+		a
+			display: block
+			&:hover
+				color: #0194f9
+				border-color: #0194f9
+
+	&__btn-order
+		width: 170px
+		
+	&__mobile-btn
+		display: none
+		
+		
+	
+.content
+	padding-top: 40px
+	padding-bottom: 50px
+
+.nav-block
+	background-color: #dfedfa
+	&__list
+		li
+			width: 100%
+			border-bottom: 1px solid #d1e6f7
+			&:last-of-type
+				border-bottom: none
+			&:hover, &.selected
+				a
+					color: #fff
+					background-color: #5db7f5
+
+		a
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+			height: 79px
+			line-height: 24px
+			font-weight: 700
+			letter-spacing: 0.7px
+			padding: 5px 30px
+		
+
+.data
+	margin-bottom: 19px
+	margin-top: -4px
+
+.main-title
+	font-size: 24px
+	letter-spacing: 1.2px
+
+.breadcrumbs
+	li
+		color: #666666
+		&:after
+			display: inline-block
+			vertical-align: middle
+			content: ''
+			@include sprite($arrow)
+			margin-left: 6px
+			margin-right: 6px
+		&:last-of-type
+			&:after
+				display: none
+	a
+		color: #0191f9
+		&:hover
+			border-color: #0191f9
+
+
+
+.search-block
+	display: flex
+	align-items: center
+	border-radius: 50px
+	overflow: hidden
+	&__input
+		height: 30px
+		width: calc(100% - 100px)
+		padding: 0 15px
+	&__btn
+		border-radius: 0
+		width: 100px
+		
+
+
+.jq-selectbox
+	position: relative
+	&.select_small
+		.jq-selectbox
+			&__select
+				height: 30px
+			&__trigger
+				height: 30px
+				width: 35px
+	&.select_normal
+		.jq-selectbox
+			&__select
+				font-size: 16px
+				border: 2px solid #e6e6e6
+				height: 50px
+			&__trigger
+				height: 50px
+				width: 60px
+				&:after
+					border-width: 12px 7px 0 7px
+
+				
+	&.opened
+		.jq-selectbox
+			&__select
+				// border-radius: 50px 50px 0 0
+				
+
+	&__select
+		position: relative
+		background-color: #fff
+		border-radius: 50px
+		text-align: center
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		overflow: hidden
+		&-text
+			width: 100%
+			padding-right: 15px
+
+	&__trigger
+		position: absolute
+		right: 0
+		top: 0
+		background-color: #5db7f5
+		display: flex
+		align-items: center
+		justify-content: center
+		&:after
+			display: block
+			content: ''
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 8px 4.5px 0 4.5px
+			border-color: rgba(255,255,255,.8) transparent transparent transparent
+		
+
+
+	&__dropdown
+		position: absolute
+		background-color: #fff
+		border-radius: 15px
+		top: 100% !important
+		left: 0
+		right: 0
+		background-color: #5db7f5
+		color: #fff
+		overflow: hidden
+		width: 100% !important
+		li
+			width: 100%
+			padding: 3px 10px
+			cursor: pointer
+			&:hover, &.selected
+				color: $color-1
+				background-color: #fff
+	select
+		display: none
+		
+
+		
+.control
+	margin-bottom: 25px
+	&__search
+		width: 400px
+		margin-right: 10px
+
+	&__select
+		width: 170px
+		margin-left: 11px
+		margin-right: 11px
+		&_ml0
+			margin-left: 0
+
+	&__btn
+		margin-left: 10px
+		margin-right: 10px
+		width: 127px
+		&-search
+			width: 135px
+			margin-left: 10px
+
+	&__id
+		height: 30px
+		text-align: center
+		font-size: 14px
+		font-family: $font-family-1
+		width: 135px
+		border-radius: 50px
+		margin-left: 11px
+		margin-right: 11px
+		&::placeholder
+			opacity: 1
+			color: $color-1
+		
+		
+	
+.t
+	margin-bottom: 27px
+	&_6
+		.t
+			&__item
+				&:first-of-type
+					padding-left: 30px
+					width: 23%
+				&:last-of-type
+					padding-right: 30px
+
+				&:nth-of-type(2), &:nth-of-type(3)
+					width: 12.65%
+
+				&:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6)
+					width: 17.2%
+	&_7
+		.t
+			&__item
+				&:first-of-type
+					padding-left: 30px
+					width: 23%
+				&:last-of-type
+					padding-right: 30px
+
+				&:nth-of-type(2)
+					width: 15%
+
+				&:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5)
+					width: 12%
+
+				&:nth-of-type(6), &:nth-of-type(7)
+					width: 13%
+
+				
+	&__head
+		.t
+			&__item
+				font-size: 15px
+				font-weight: 700
+
+			&__line
+				background-color: rgba(255,255,255,.6)
+				
+	&__line
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		border-bottom: 1px solid #cee4f6
+
+	&__body
+		font-size: 15px
+		// height: 323px
+		// overflow: hidden
+		letter-spacing: 0.3px
+		.t
+			&__line
+				&:nth-of-type(odd)
+					background-color: rgba(255,255,255,.8)
+				&:nth-of-type(even)
+					background-color: rgba(255,255,255,.6)
+			&__item
+				&:nth-of-type(1)
+					color: #002c77
+					font-weight: 700
+				
+				
+	&__item
+		height: 53px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		.color
+			&-green, &-red
+				font-weight: 600
+
+	&__btn
+		width: 127px
+		
+
+.scroll
+	position: relative
+	height: 323px
+
+
+.info
+	margin-left: 5px
+	position: relative
+	z-index: 2
+	&:hover
+		z-index: 3
+	&__icon
+		position: relative
+		top: 2px
+		width: 15px
+		height: 15px
+		font-size: 13px
+		background-color: #5db7f5
+		border-radius: 4px
+		color: $color-1
+		display: flex
+		justify-content: center
+		align-items: center
+		padding-bottom: 1px
+		&:before
+			content: '?'
+
+		&:hover
+			+ .info
+				&__wrap
+					opacity: 1
+					visibility: visible
+
+	&__wrap
+		transition: .3s
+		opacity: 0
+		position: absolute
+		top: 50%
+		left: 100%
+		transform: translateY(-50%)
+		margin-left: 3px
+		// display: none
+		background-color: #5db7f5
+		width: 130px
+		font-size: 10px
+		color: #fff
+		visibility: hidden
+		padding: 3px
+		border-radius: 5px
+	
+		
+.catalog
+	padding-bottom: 40px
+	&__list
+		.slick-slide
+			padding-left: 15px
+			padding-right: 15px
+		.slick-arrow
+			position: absolute
+			bottom: -38px
+			font-size: 0
+			background: none
+			cursor: pointer
+
+		.slick-prev
+			left: 50%
+			@include sprite($arrow-left-blue)
+			margin-left: -51px
+			&.slick-disabled
+				@include sprite($arrow-left-white)
+
+		.slick-next
+			right: 50%
+			@include sprite($arrow-right-blue)
+			margin-right: -51px
+			&.slick-disabled
+				@include sprite($arrow-right-white)
+
+		.slick-disabled
+			cursor: default
+
+
+
+		
+	&__item
+		display: block
+		background-color: #fff
+		height: 140px
+		padding-top: 25px
+		margin-bottom: 30px
+		&:hover
+			background-color: #2ba4f9
+			.catalog
+				&__icon
+					img
+						&:nth-of-type(1)
+							opacity: 0
+						&:nth-of-type(2)
+							opacity: 1
+
+				&__text
+					color: #fff
+					
+					
+
+	&__icon
+		position: relative
+		height: 60px
+		margin-bottom: 10px
+		img
+			transition: .3s
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			&:nth-of-type(2)
+				opacity: 0
+		
+	&__text
+		font-size: 19px
+		font-weight: 700
+		letter-spacing: 0.68px
+		text-transform: uppercase
+		text-align: center
+		transition: .3s
+		
 
 
 
 
+
+.footer
+	&__wrap
+		padding-top: 45px
+		padding-bottom: 50px
+		
+	&__col
+		padding-top: 44px
+		border-right: 1px solid #d2d4d8
+		&:last-of-type
+			border-right: none
+
+	&__nav
+		li
+			width: 100%
+
+
+
+	&__title, &__nav
+		padding-left: 17px
+		&_pl0
+			padding-left: 0
+		
+	&__title
+		font-size: 24px
+		letter-spacing: 1.2px
+		color: #666666
+		margin-bottom: 30px
+		
+	&__nav
+		letter-spacing: 0.7px
+		li
+			margin-bottom: 10px
+		a
+			color: #666666
+			&:hover
+				color: #000000
+
+	&__copy
+		padding-top: 15px
+		padding-bottom: 19px
+		border-top: 1px solid #d2d4d8
+		&-logo
+			margin-right: 27px
+		&-text
+			line-height: 24px
+			letter-spacing: 0.7px
+		
+
+		
+		
+.c-block
+	padding-left: 17px
+	color: #666666
+	a
+		color: #666666
+	&__line
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 10px
+		&:last-of-type
+			margin-bottom: 0
+
+	&__title
+		width: 105px
+
+	&__content
+		color: #000000
+		width: calc(100% - 105px)
+		letter-spacing: 0.7px
+		a
+			color: #000000
+			&.email
+				color: #0194f9
+				letter-spacing: 0.2px
+				&:hover
+					border-color: #0194f9
+		
+	&__phones
+		font-size: 18px
+		letter-spacing: 0.9px
+
+	&__socials
+		padding-top: 6px
+		li
+			margin-right: 4px
+			&:last-of-type
+				margin-right: 0
+		
+		a
+			display: block
+			&:hover
+				transform: scale(.9)
+		
+
+.popup-links
+	li
+		width: 100%
+		margin-bottom: 10px
+		&:last-of-type
+			margin-bottom: 0
+
+		
+
+.popup
+	display: none
+	overflow: visible
+	background: none
+	padding: 0
+	&:before
+		z-index: 1
+		display: block
+		position: relative
+		content: ''
+		left: 50%
+		width: 345px
+		height: 92px
+		transform: translateX(-50%)
+		background: url('../../img/bg/radius.png') no-repeat center
+		margin-bottom: -3px
+	&__wrap
+		background-color: #fff
+		box-shadow: 0 2px 7px rgba(0, 0, 0, 0.31)
+		border-radius: 30px
+		position: relative
+		padding: 65px 110px 45px
+		cursor: default !important
+	&_small
+		width: 400px
+	&_large
+		width: 1170px
+	.fancybox-close-small
+		display: none
+	&__logo
+		position: absolute
+		z-index: 2
+		top: 55px
+		left: 50%
+		margin-left: 7px
+		transform: translateX(-50%)
+		
+	&__close
+		z-index: 2
+		position: absolute
+		right: 65px
+		top: 117px
+		font-size: 12px
+		color: #a6a6a6
+		letter-spacing: 0.6px
+		cursor: pointer
+		&:hover
+			color: $color-1
+	&__title
+		text-align: center
+		font-size: 24px
+		color: #0194f9
+		margin-bottom: 20px
+		margin-top: -25px
+		
+	&__btn
+		width: 100%
+
+	&__input, &__select, &__btn, &__textarea
+		margin-bottom: 20px
+		
+		
+
+
+.fancybox-bg
+	background-color: rgba(255,255,255,.8)
+
+
+.prelouder
+	z-index: 100
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 100%
+	height: 100vh
+	transition: .3s
+	background: url('../../img/bg/preloader.jpg') no-repeat center, #D7E8F8
+	&_hide
+		opacity: 0
+		transform: scale(0)
+
+
+
+
+				
+
+.color
+	&-green
+		color: #4a981b
+
+	&-red
+		color: #e90101
+
+
+.scroll-control
+	&__btn
+		margin-left: 13px
+		margin-right: 13px
+		&.btn-up
+			&:hover
+				.icon
+					@include sprite($arrow-left-white)
+
+		&.btn-down
+			&:hover
+				.icon
+					@include sprite($arrow-right-white)
+			
+
+.ps__scrollbar-y-rail
+	width: 9px !important
+	background-color: #e5e5e5 !important
+	opacity: 1 !important
+	.ps__scrollbar-y
+		opacity: 1 !important
+		background-color: #5db7f5 !important
+		width: 9px !important
+		right: 0 !important
+		border-radius: 0 !important
+
+
+.ps__scrollbar-x-rail
+	display: none !important
 
 .hidden-lg
 	display: none
+
+
+@keyframes scale
+	0%
+		transform: scale(1)
+
+	50%
+		transform: scale(1.1)
+
+	100%
+		transform: scale(1)

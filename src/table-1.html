@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="template/styles/css/style.css" />
+	<link rel="stylesheet" href="template/styles/css/responsive.css" />
+	<script src="template/scripts/libs.js"></script>
+	<script src="template/scripts/common.js"></script>
+	<!--[if lt IE 9]>
+	<script>
+		document.createElement('header');
+		document.createElement('nav');
+		document.createElement('main');
+		document.createElement('section');
+		document.createElement('article');
+		document.createElement('aside');
+		document.createElement('footer');
+	</script>
+	<![endif]-->
+</head>
+<body>
+<div class="main-wrap">
+	<div class="prelouder"></div>
+	<header class="header">
+		<div class="panel">
+			<div class="case">
+				<div class="row row-">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col">
+						<a href="" class="panel__logo logo row i-bottom">
+							<div class="logo__icon"><img src="upload/logo/logo-icon.png" alt=""></div>
+							<div class="logo__text"><img src="upload/logo/logo-text.png" alt=""></div>
+						</a>
+					</div>
+					<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 col row i-mid">
+						<nav class="panel__nav nav">
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li><a href="">Услуги и цены</a></li>
+								<li><a href="">Отзывы</a></li>
+								<li><a href="">Акции</a></li>
+								<li><a href="">О компании</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+						</nav>
+						<a href="" class="panel__btn-order btn btn btn_green btn_normal">Заказать</a>
+						<div class="panel__mobile-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+	<main class="main">
+		<div class="content">
+			<div class="case">
+				<div class="content__wrap row row-">
+					<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 col">
+						<div class="nav-block">
+							<div class="nav-block__list">
+								<ul>
+									<li><a href="">УБОРКА КВАРТИР И ДОМОВ</a></li>
+									<li><a href="">УБОРКА ОФИСНЫХ ПОМЕЩЕНИЙ</a></li>
+									<li><a href="">ПОМЫВКА ОКОН</a></li>
+									<li><a href="">ОПЛАТА И ЦЕНА</a></li>
+									<li class="selected"><a href="">ВСЕ УСЛУГИ</a></li>
+									<li><a href="">КОНТАКТЫ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col">
+						<div class="data row between i-mid">
+							<div class="main-title">Заявка на поступление</div>
+							<div class="breadcrumbs">
+								<ul>
+									<li><a href="">Главная</a></li>
+									<li>Категории</li>
+								</ul>
+							</div>
+						</div>
+						<div class="control row i-mid">
+							<div class="control__search search-block">
+								<input type="text" class="search-block__input">
+								<button class="search-block__btn btn btn_blue btn_small">Поиск</button>
+							</div>
+							<div class="control__btn btn btn_yellow btn_small">Ожидание</div>
+							<div class="control__btn btn btn_red btn_small">Отказать</div>
+							<div class="control__btn btn btn_green btn_small">Принять</div>
+						</div>
+
+
+						<!-- 
+						t = table
+						-->
+						<div class="t t_6">
+							<div class="t__head">
+								<div class="t__line">
+									<div class="t__item">Имя</div>
+									<div class="t__item">Date</div>
+									<div class="t__item">Статус</div>
+									<div class="t__item">Ожидание</div>
+									<div class="t__item">Отказать</div>
+									<div class="t__item">Принять</div>
+								</div>
+							</div>
+							<div class="t__body">
+								<div class="scroll">
+									<div class="scroll__wrap">
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, labore!</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-red">Ожидание</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, placeat.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item">Ожидание</div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, veniam!</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-green">Active</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, fugiat.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item">Ожидание</div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, rerum.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-green">Active</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, eum.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item">Ожидание</div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, labore!</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-green">Active</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, tenetur.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item">Ожидание</div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, sit.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-green">Active</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, explicabo!</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item">Ожидание</div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eveniet!</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-green">Active</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, perspiciatis.</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item">Ожидание</div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+										<div class="t__line">
+											<div class="t__item">Пидков Олег <div class="info"><div class="info__icon"></div><div class="info__wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, aperiam!</div></div></div>
+											<div class="t__item">12.12.21</div>
+											<div class="t__item"><span class="color-green">Active</span></div>
+											<div class="t__item"><div class="t__btn btn btn_yellow btn_small">Ожидание</div></div>
+											<div class="t__item"><div class="t__btn btn btn_red btn_small">Отказать</div></div>
+											<div class="t__item"><div class="t__btn btn btn_green btn_small">Принять</div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="scroll-control row i-mid mid">
+							<div class="scroll-control__btn btn btn-up"><i class="icon icon-arrow-left-blue"></i></div>
+							<div class="scroll-control__btn btn btn-down"><i class="icon icon-arrow-right-blue"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<footer class="footer">
+		<div class="case">
+			<div class="footer__wrap row row-">
+				<div class="footer__col col-lg-4 col-md-3 col-sm-12 col-xs-12 col">
+					<div class="footer__title footer__title_pl0">Основные услуги</div>
+					<div class="footer__nav footer__nav_pl0">
+						<ul>
+							<li><a href="">Уборка офисов</a></li>
+							<li><a href="">Уборка квартир и домов</a></li>
+							<li><a href="">Уборка складских помещений</a></li>
+							<li><a href="">Уборка Коттеджей</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__col col-lg-4 col-md-3 col-sm-12 col-xs-12 col">
+					<div class="footer__title">Информация</div>
+					<div class="footer__nav">
+						<ul>
+							<li><a href="">Улуги и цены</a></li>
+							<li><a href="">Акции</a></li>
+							<li><a href="">Отзывы</a></li>
+							<li><a href="">О компании</a></li>
+							<li><a href="">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__col col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="footer__title">Контакты</div>
+					<div class="c-block">
+						<div class="c-block__list">
+							<div class="c-block__line">
+								<div class="c-block__title">телефон:</div>
+								<div class="c-block__content">
+									<div class="c-block__phones">
+										<p><a href="ma">+7 (902) 888-88-89</a></p>
+										<p><a href="ma">+7 (902) 888-88-87</a></p>
+									</div>
+								</div>
+							</div>
+							<div class="c-block__line">
+								<div class="c-block__title">Адрес:</div>
+								<div class="c-block__content">г. Москва, ул К. Маркса 116 офис 7</div>
+							</div>
+							<div class="c-block__line">
+								<div class="c-block__title">E-mail:</div>
+								<div class="c-block__content"><a href="mailto:info@bienchen.ru" class="email">info@bienchen.ru</a></div>
+							</div>
+							<div class="c-block__line">
+								<div class="c-block__title">Социальные сети:</div>
+								<div class="c-block__socials">
+									<ul>
+										<li><a href=""><i class="icon icon-facebook"></i></a></li>
+										<li><a href=""><i class="icon icon-twitter"></i></a></li>
+										<li><a href=""><i class="icon icon-vk"></i></a></li>
+										<li><a href=""><i class="icon icon-ok"></i></a></li>
+										<li><a href=""><i class="icon icon-google-plus"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__copy row i-mid">
+				<div class="footer__copy-logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+				<div class="footer__copy-text">
+					<p>Профессиональная уборка квартир, помещений, офиса</p>
+					<p>“BIENCHEN” © 2009 - 2016</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<div class="popup popup_large" id="popup-seven">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__title"></div>
+			<div class="popup__grid row row-">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal input_phone">
+						<input type="text" class="input__wrap" placeholder="Telephonenumber">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="E-mail Adress">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select select_normal" data-placeholder="Name/Vorename">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select select_normal" data-placeholder="Name/Vorename">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select select_normal" data-placeholder="Name/Vorename">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorename">
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col">
+					<button class="popup__btn btn btn_blue btn_normal">Senden</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="popup popup_small" id="popup-five">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__grid row row-">
+				<div class="col-lg-12 col">
+					<div class="popup__input input input_normal input_border input_date">
+						<input type="text" class="input__wrap" placeholder="00.00.00">
+					</div>
+					<button class="popup__btn btn btn_green btn_normal">Пригласить</button>
+					<button class="popup__btn btn btn_yellow btn_normal">Ожидайте</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup_small" id="popup-one">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__grid row row-">
+				<div class="col-lg-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorname">
+					</div>
+					<button class="popup__btn btn btn_blue btn_normal">Senden</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup_small" id="popup-nine">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__grid row row-">
+				<div class="col-lg-12 col">
+					<div class="popup__input input input_normal input_phone">
+						<input type="text" class="input__wrap" placeholder="Telephonenumber">
+					</div>
+					<button class="popup__btn btn btn_blue btn_normal">Senden</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup_small" id="popup-twelve">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__title">Пидков Олег</div>
+			<div class="popup__grid row row-">
+				<div class="col-lg-12 col">
+					<div class="popup__input input input_normal input_date">
+						<input type="text" class="input__wrap" placeholder="00.00.00">
+					</div>
+					<button class="popup__btn btn btn_red btn_normal">No Active</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup_large" id="popup-four">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__title">Пидков Олег</div>
+			<div class="popup__grid row row-">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorname">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal">
+						<input type="text" class="input__wrap" placeholder="Name/Vorname">
+					</div>
+				</div>
+
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Пол">
+						<option value=""></option>
+						<option value="">Мужской</option>
+						<option value="">Женский</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col">
+					<select name="" id="" class="popup__select select_normal" data-placeholder="Дата рождения">
+						<option value=""></option>
+						<option value="">Название 1</option>
+						<option value="">Название 2</option>
+						<option value="">Название 3</option>
+					</select>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col">
+					<div class="popup__textarea textarea">
+						<textarea class="textarea__wrap" placeholder="Ihre Frage"></textarea>
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col">
+					<button class="popup__btn btn btn_blue btn_normal">Senden</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup popup_small" id="popup-eleven">
+		<div class="popup__logo"><img src="upload/logo/logo-icon.png" alt=""></div>
+		<div class="popup__close" data-fancybox-close="">закрыть</div>
+		<div class="popup__wrap">
+			<div class="popup__title">Пидков Олег</div>
+			<div class="popup__grid row row-">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col">
+					<div class="popup__input input input_normal input_border input_date">
+						<input type="text" class="input__wrap" placeholder="00.00.00">
+					</div>
+					<button class="popup__btn btn btn_green btn_normal">Active</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

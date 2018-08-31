@@ -7,19 +7,23 @@
 	margin: 0 auto
 
 
-.row, .col
+.row
 	display: flex
 	flex-wrap: wrap
+	// align-items: flex-start
+
 
 .row
 	flex-direction: row
 	&-r
 		flex-direction: row-reverse
+	&-
+		margin-left: -15px
+		margin-right: -15px
 
 .col
-	flex-direction: column
-	&-r
-		flex-direction: column-reverse
+	padding-left: 15px
+	padding-right: 15px
 
 
 .row, .col
@@ -52,3 +56,30 @@
 		align-items: baseline
 	&-strech
 		align-items: stretch
+
+
+
+@mixin grid($gridCols, $beforeCountText)
+	$i: 1
+	@while $i < $gridCols + 1
+		.col-#{$beforeCountText}-#{$i}
+			width: 100% / $gridCols * $i
+			$i: $i + 1
+
+@media screen and (min-width: 1220px)
+	@include grid(12, "lg")
+
+@media screen and (max-width: 1220px)
+	@include grid(12, "md")
+
+@media screen and (max-width: 992px)
+	@include grid(12, "sm")
+
+@media screen and (max-width: 767px)
+	@include grid(12, "xs")
+
+
+
+
+
+
