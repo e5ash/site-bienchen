@@ -1090,7 +1090,7 @@ input, .btn, .slick-slide, textarea {
 
 .prelouder {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1100,12 +1100,24 @@ input, .btn, .slick-slide, textarea {
   height: 100vh;
   -webkit-transition: .3s;
   transition: .3s;
-  background: url("../../img/bg/preloader.jpg") no-repeat center, #D7E8F8; }
+  background: rgba(0, 0, 0, 0.88); }
+  .prelouder:before {
+    display: block;
+    position: fixed;
+    content: '';
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin-top: -58px;
+    margin-left: -58px;
+    width: 116px;
+    height: 116px;
+    background: url("../../img/bg/preloader.png") no-repeat center;
+    -webkit-animation: scale .9s infinite;
+            animation: scale .9s infinite; }
   .prelouder_hide {
-    opacity: 0;
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0); }
+    visibility: hidden;
+    opacity: 0; }
 
 .color-green {
   color: #4a981b; }
@@ -1150,8 +1162,8 @@ input, .btn, .slick-slide, textarea {
     -webkit-transform: scale(1);
             transform: scale(1); }
   50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
@@ -1161,8 +1173,8 @@ input, .btn, .slick-slide, textarea {
     -webkit-transform: scale(1);
             transform: scale(1); }
   50% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1); } }
